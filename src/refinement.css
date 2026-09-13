@@ -1,0 +1,333 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("/assets/montserrat-400.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("/assets/montserrat-500.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("/assets/montserrat-600.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+h1,
+h2,
+h3 {
+  font-family: Montserrat, Arial, sans-serif;
+}
+.paper-chapter-title {
+  font-size: clamp(31px, 3.3vw, 47px);
+  line-height: 1.22;
+  letter-spacing: -0.045em;
+}
+.paper-chapter-title .is-emphasized {
+  font-weight: 500;
+}
+.hero-title {
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: 400;
+  font-size: clamp(40px, 5vw, 72px);
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+}
+.hero-title .line-inner {
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+.hero-title .line-1 {
+  font-weight: 500;
+}
+.collage-note {
+  font:
+    500 11px/1.4 Montserrat,
+    Arial,
+    sans-serif;
+  letter-spacing: 0.01em;
+  padding: 12px 17px;
+}
+.fragment-cream {
+  width: 39%;
+  height: 34%;
+  right: 5%;
+  top: 11%;
+  opacity: 0.85;
+}
+.community-copy h2 {
+  font-size: clamp(34px, 3.6vw, 50px);
+  letter-spacing: -0.045em;
+}
+.rail-intro h2 {
+  font-size: clamp(30px, 3.1vw, 44px);
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+}
+.hero-webgl {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.hero-webgl.is-ready {
+  opacity: 1;
+}
+.hero-webgl-canvas,
+.hero-webgl-canvas canvas,
+.hero-webgl-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero-webgl-shade {
+  background:
+    linear-gradient(180deg, #14212825, transparent 35%, #14212870),
+    linear-gradient(90deg, #14212835, transparent 75%);
+}
+.hero-topline,
+.hero-content,
+.hero-caption,
+.hero-bottom {
+  z-index: 3;
+}
+.why-support {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10vw;
+  background: #f3f2eb;
+  border-top: 1px solid #dedfd6;
+}
+.why-support-heading h2 {
+  font-size: clamp(31px, 3.1vw, 44px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+  margin: 24px 0;
+}
+.why-support-heading em {
+  color: #54725c;
+}
+.why-support-heading > p {
+  font-size: 15px;
+  max-width: 430px;
+  color: #59675f;
+  line-height: 1.8;
+}
+.why-support-notes article {
+  padding: 0 0 30px;
+}
+.why-support-notes > div + div {
+  border-top: 1px solid #d3d9ce;
+  padding-top: 30px;
+}
+.why-support-notes .eyebrow {
+  font-size: 10px;
+  color: #647d66;
+}
+.why-support-notes h3 {
+  font-size: 22px;
+  letter-spacing: -0.03em;
+  line-height: 1.35;
+  font-weight: 500;
+  margin: 13px 0;
+}
+.why-support-notes p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #52605a;
+}
+.why-support-notes a {
+  display: inline-block;
+  font-size: 11px;
+  color: #425c49;
+  border-bottom: 1px solid #adbcae;
+  padding-bottom: 6px;
+  margin-top: 19px;
+}
+.location-section {
+  padding: 115px var(--space) 85px;
+  background: #f1f2ec;
+  overflow: hidden;
+}
+.location-heading {
+  max-width: 610px;
+  margin: 0 auto;
+  text-align: center;
+}
+.location-heading h2 {
+  font-size: clamp(30px, 3.2vw, 46px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+  margin: 24px 0;
+}
+.location-heading em {
+  color: #496b56;
+}
+.location-heading p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #53625b;
+  max-width: 490px;
+  margin: auto;
+}
+.world-map {
+  aspect-ratio: 2/1;
+  max-width: 1120px;
+  margin: 35px auto 0;
+  background: #f1f2ec;
+}
+.world-map-image {
+  object-fit: fill;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #fff 12%,
+    #fff 87%,
+    transparent
+  );
+}
+.dark .world-map {
+  background: #242a2c;
+}
+.dark .map-location-label,
+.dark .map-tooltip,
+.dark .map-motion-control {
+  background: #343c3b;
+  color: #f9f5ed;
+  border-color: #5c6660;
+}
+.map-location-label {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+  background: #fcfcfaed;
+  color: #304439;
+  border: 1px solid #d0d9cb;
+  transform: translate(-20%, -160%);
+  white-space: nowrap;
+  box-shadow: 0 4px 20px #2c3e3410;
+  pointer-events: none;
+}
+.map-tooltip {
+  background: #fff;
+  color: #304439;
+  border: 1px solid #d0d9cb;
+  z-index: 3;
+}
+.map-motion-control {
+  background: #fcfcfa;
+  color: #52685b;
+  padding: 9px 14px;
+  border: 1px solid #d0d9cb;
+  border-radius: 30px;
+}
+.location-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  align-items: center;
+  border-top: 1px solid #cdd7c9;
+  padding-top: 25px;
+  color: #53645a;
+  font-size: 12px;
+}
+.location-footer > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.location-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #bd623e;
+  display: inline-block;
+}
+.location-footer a {
+  border-bottom: 1px solid #a8bba9;
+  padding: 8px 0;
+}
+@media (max-width: 959px) {
+  .why-support {
+    gap: 45px;
+  }
+  .paper-chapter-title {
+    font-size: 33px;
+  }
+  .location-section {
+    padding-top: 85px;
+  }
+}
+@media (max-width: 639px) {
+  .hero-title {
+    font-size: clamp(29px, 8.1vw, 42px);
+    line-height: 1.14;
+    letter-spacing: -0.05em;
+  }
+  .hero-title .line-0,
+  .hero-title .line-1 {
+    font-size: inherit;
+    letter-spacing: inherit;
+  }
+  .paper-chapter-title {
+    font-size: clamp(28px, 7.2vw, 36px);
+    letter-spacing: -0.045em;
+  }
+  .collage-note {
+    font-size: 9px;
+    padding: 9px 12px;
+  }
+  .why-support {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .why-support-heading h2,
+  .location-heading h2 {
+    font-size: 30px;
+  }
+  .why-support-notes h3 {
+    font-size: 21px;
+  }
+  .location-section {
+    padding: 75px 24px 45px;
+  }
+  .location-heading p {
+    font-size: 14px;
+  }
+  .world-map {
+    margin-top: 35px;
+    aspect-ratio: 1.6/1;
+    overflow: visible;
+  }
+  .map-location-label {
+    font-size: 9px;
+    padding: 6px 8px;
+    transform: translate(-20%, -155%);
+  }
+  .map-motion-control {
+    font-size: 10px;
+    bottom: 0;
+    right: 0;
+    padding: 7px 10px;
+  }
+  .location-footer {
+    margin-top: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,78 @@
+/* Keep the existing navigation layout; the glass surface improves contrast over media. */
+.site-header.site-header--glass {
+  isolation: isolate;
+  color: #fff;
+  background: #14202caa;
+  border: 1px solid #ffffff42;
+  border-radius: 14px;
+  -webkit-backdrop-filter: blur(22px) saturate(155%);
+  backdrop-filter: blur(22px) saturate(155%);
+  box-shadow:
+    inset 0 1px 0 #ffffff38,
+    inset 0 -1px 0 #ffffff12,
+    0 8px 28px #10212d1c;
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    color 0.35s ease;
+}
+.site-header--glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    110deg,
+    #ffffff0f,
+    transparent 35%,
+    #ffffff09 70%,
+    transparent
+  );
+  box-shadow:
+    inset 1px 0 0 #ffffff26,
+    inset -1px 0 0 #ffffff19;
+  pointer-events: none;
+  z-index: -1;
+}
+.site-header.site-header--glass.is-solid {
+  color: var(--ink);
+  background: #fcfcfad6;
+  border-color: #ffffffc9;
+  box-shadow:
+    inset 0 1px 0 #fff,
+    inset 0 -1px 0 #22344b12,
+    0 8px 28px #10212d12;
+  -webkit-backdrop-filter: blur(24px) saturate(155%);
+  backdrop-filter: blur(24px) saturate(155%);
+}
+.site-header--glass .header-action {
+  box-shadow: inset 0 1px 0 #ffffff24;
+}
+@supports not (
+  (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
+) {
+  .site-header.site-header--glass {
+    background: #233241;
+  }
+  .site-header.site-header--glass.is-solid {
+    background: #fcfcfa;
+  }
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .site-header.site-header--glass {
+    background: #233241;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .site-header.site-header--glass.is-solid {
+    background: #fcfcfa;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header.site-header--glass {
+    transition: none;
+  }
+}

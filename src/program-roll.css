@@ -1,0 +1,94 @@
+/* Program information below the supplied circular split-roll. */
+.program-information {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 8vw;
+  align-items: start;
+}
+.program-information-heading h2 {
+  font-size: clamp(30px, 3vw, 42px);
+  line-height: 1.25;
+  font-weight: 400;
+  margin-top: 24px;
+}
+.program-information-heading h2 em {
+  color: var(--blue);
+}
+.program-information-list {
+  min-width: 0;
+}
+.program-note {
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 120px;
+}
+.program-note:first-child {
+  border-top: 1px solid var(--rule);
+}
+.program-note summary {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 27px 0;
+  list-style: none;
+  cursor: pointer;
+}
+.program-note summary::-webkit-details-marker {
+  display: none;
+}
+.program-note summary > span:first-child {
+  font-size: 11px;
+  color: var(--muted);
+}
+.program-note summary h3 {
+  flex: 1;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+}
+.program-note summary > span:last-child {
+  font-size: 25px;
+  font-weight: 400;
+  transition: transform 0.25s ease;
+}
+.program-note[open] summary > span:last-child {
+  transform: rotate(45deg);
+}
+.program-note-body {
+  padding: 0 0 30px 35px;
+}
+.program-note-body > p {
+  font-size: 15px;
+  color: var(--muted);
+  max-width: 600px;
+}
+.program-note-body ul {
+  padding-left: 18px;
+  margin: 20px 0 0;
+}
+.program-note-body li {
+  font-size: 14px;
+  line-height: 1.7;
+  padding: 5px 0 5px 3px;
+}
+.program-note-body li::marker {
+  color: var(--orange);
+}
+@media (max-width: 760px) {
+  .program-information {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+@media (max-width: 540px) {
+  .program-note summary {
+    gap: 14px;
+    padding-block: 24px;
+  }
+  .program-note summary h3 {
+    font-size: 18px;
+  }
+  .program-note-body {
+    padding-left: 0;
+  }
+}
