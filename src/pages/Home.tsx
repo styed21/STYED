@@ -7,6 +7,7 @@ import { ProgramRail } from "../components/ProgramRail";
 import { CommunityMontage } from "../components/CommunityMontage";
 import MapDemo from "@/components/ui/demo";
 import { WhySupport } from "../components/WhySupport";
+import { CommunityPoster } from "../components/CommunityPoster";
 
 export function Home() {
   return (
@@ -33,6 +34,7 @@ export function Home() {
           </div>
         </div>
       </ProgramRail>
+      <CommunityPoster />
       <Chapters />
       <Services />
       <WhySupport />

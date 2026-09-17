@@ -189,6 +189,51 @@ function CircularSplitRollComp({
     const mm = gsap.matchMedia();
 
     mm.add(
+      "(max-width: 768px) and (prefers-reduced-motion: no-preference)",
+      () => {
+        const ctx = gsap.context(() => {
+          gsap.utils
+            .toArray<HTMLElement>(".program-mobile-card")
+            .forEach((card, index) => {
+              gsap.fromTo(
+                card,
+                { y: 35, rotate: index % 2 ? 3 : -3 },
+                {
+                  y: 0,
+                  rotate: 0,
+                  ease: "none",
+                  scrollTrigger: {
+                    trigger: card,
+                    start: "top 95%",
+                    end: "top 55%",
+                    scrub: 0.4,
+                    invalidateOnRefresh: true,
+                  },
+                },
+              );
+              gsap.fromTo(
+                card.querySelector("img"),
+                { scale: 1.12, yPercent: -3 },
+                {
+                  scale: 1.06,
+                  yPercent: 2,
+                  ease: "none",
+                  scrollTrigger: {
+                    trigger: card,
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: 0.4,
+                    invalidateOnRefresh: true,
+                  },
+                },
+              );
+            });
+        }, rootRef);
+        return () => ctx.revert();
+      },
+    );
+
+    mm.add(
       "(min-width: 769px) and (prefers-reduced-motion: no-preference)",
       () => {
         const ctx = gsap.context(() => {
@@ -477,7 +522,10 @@ function CircularSplitRollComp({
       >
         <div className="mx-auto grid w-full max-w-5xl grid-cols-3 gap-5 max-md:grid-cols-2 max-md:gap-4">
           {safeItems.map((item) => (
-            <article key={item.id} className={`w-full ${gridCardClassName}`}>
+            <article
+              key={item.id}
+              className={`program-mobile-card w-full ${gridCardClassName}`}
+            >
               <div
                 className={`relative aspect-square w-full overflow-hidden rounded-[18px] bg-[#f5f2eb] shadow-[0_18px_38px_rgba(0,0,0,0.28)] max-md:rounded-[14px] ${gridImageClassName}`}
               >

@@ -13,6 +13,7 @@ import "./contact.css";
 import "./donate-button.css";
 import "./mentorship.css";
 import "./programs-illustrations.css";
+import "./responsive.css";
 
 const root = document.getElementById("root");
 if (!root) throw new Error("Missing application root");

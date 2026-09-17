@@ -1,0 +1,209 @@
+/* Shared touch layouts, kept after the page styles so breakpoints agree. */
+.footer-statement.footer-organization {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: clamp(28px, 4.5vw, 64px);
+  line-height: 1.18;
+}
+.footer-organization > span { max-width: 100%; }
+@media (max-width: 759px) {
+  .footer-statement.footer-organization {
+    font-size: clamp(24px, 5.5vw, 38px);
+    gap: 6px;
+  }
+}
+/* Decorative transforms must not expand the mobile visual viewport. */
+main { overflow-x: clip; }
+.giving-token-float { transform-style: flat; }
+.token-back { z-index: 0; }
+.token-middle { z-index: 1; }
+.token-front { z-index: 2; }
+.community-poster {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.25fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 100px);
+  padding-top: 30px;
+  padding-bottom: 130px;
+  max-width: 1500px;
+  margin-inline: auto;
+}
+.community-poster h2 {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 400;
+  line-height: 1.25;
+  margin-block: 22px;
+}
+.community-poster h2 em {
+  color: var(--blue);
+}
+.community-poster-copy p {
+  max-width: 420px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.community-poster .text-link {
+  margin-top: 26px;
+  font-size: 14px;
+}
+.community-poster-art {
+  min-width: 0;
+}
+.community-poster-art a {
+  display: block;
+}
+.community-poster-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.community-poster-art a > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+@media (max-width: 959px) {
+  .program-viewport {
+    scroll-padding-inline: var(--space);
+  }
+}
+@media (max-width: 759px) {
+  .community-poster {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-block: 12px 95px;
+  }
+  .community-poster-copy p {
+    max-width: 540px;
+  }
+  .site-header:has(.donate-button) {
+    gap: 6px;
+    padding-inline: 8px;
+  }
+  .site-header .menu-button {
+    width: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  .site-header .brand {
+    min-width: 0;
+  }
+  .menu-dialog {
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .menu-top {
+    gap: 14px;
+  }
+  .menu-layout {
+    padding-block: 30px;
+    min-height: 0;
+  }
+  .menu-layout nav {
+    gap: 14px;
+  }
+  .menu-link {
+    min-height: 44px;
+  }
+  .menu-link-inner {
+    font-size: clamp(26px, 6.8vw, 38px);
+  }
+  .hero {
+    min-height: 600px;
+    height: calc(100svh - 20px);
+  }
+  .hero-content {
+    inset: 160px 20px 200px;
+  }
+  .hero-caption {
+    bottom: 42px;
+  }
+  .hero-caption-text {
+    max-width: 100%;
+  }
+  .hero-caption-text > p {
+    max-width: 310px;
+  }
+  .giving-hero {
+    min-height: 480px;
+  }
+  .giving-token-scene {
+    display: flex;
+    min-height: 350px;
+    max-width: 340px;
+    margin-top: 24px;
+  }
+  .giving-token-float {
+    width: 200px;
+    height: 250px;
+  }
+  .giving-token-orbit {
+    width: 260px;
+    height: 260px;
+  }
+  .giving-token-caption {
+    margin-top: 28px;
+  }
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  .contact-field,
+  .giving-field {
+    min-width: 0;
+  }
+  .text-link {
+    min-height: 44px;
+  }
+  .footer-top nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+@media (max-width: 350px) {
+  .site-header .donate-button-icon,
+  .site-header .donate-button-divider {
+    display: none;
+  }
+  .site-header .donate-button {
+    min-height: 44px;
+    padding-inline: 12px;
+  }
+  .hero-topline,
+  .hero-caption {
+    left: 18px;
+    right: 18px;
+  }
+  .community-poster h2 {
+    font-size: 27px;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: 540px;
+  }
+  .giving-hero {
+    min-height: 380px;
+  }
+  .menu-layout {
+    padding-block: 24px;
+    min-height: 0;
+  }
+  .menu-layout nav {
+    gap: 12px;
+  }
+}

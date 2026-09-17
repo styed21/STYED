@@ -6,5 +6,7 @@ STYED/
 dist/
 .cache/
 .archive/
+output/
+tmp/
 .env*
 !.env.example

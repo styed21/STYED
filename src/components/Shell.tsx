@@ -241,11 +241,9 @@ export function Footer() {
           </a>
         </nav>
       </div>
-      <div className="footer-statement" aria-label="Safe youth. For hope.">
-        <span>Safe youth.</span>
-        <span>
-          For hope<span className="footer-period">.</span>
-        </span>
+      <div className="footer-statement footer-organization" aria-label="Save the Youth Education & Development">
+        <span>Save the Youth</span>
+        <span>Education &amp; Development</span>
       </div>
       <div className="footer-bottom">
         <span>
@@ -259,6 +257,26 @@ export function Footer() {
 
 export function Shell({ children, page }: { children: ReactNode; page: Page }) {
   const reduced = useReducedMotion();
+  useEffect(() => {
+    // Accordion expansion and form steps move downstream scroll scenes.
+    // Watch content size, not scroll position, to avoid work on every touch move.
+    const main = document.getElementById("main");
+    if (!main) return;
+    let timer = 0;
+    let lastHeight = main.offsetHeight;
+    const observer = new ResizeObserver(() => {
+      const height = main.offsetHeight;
+      if (Math.abs(height - lastHeight) < 2) return;
+      lastHeight = height;
+      window.clearTimeout(timer);
+      timer = window.setTimeout(() => ScrollTrigger.refresh(), 180);
+    });
+    observer.observe(main);
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(timer);
+    };
+  }, []);
   useEffect(() => {
     if (reduced) return;
     const lenis = new Lenis({

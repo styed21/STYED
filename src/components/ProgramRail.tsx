@@ -15,6 +15,32 @@ export function ProgramRail({ children }: { children: ReactNode }) {
     () => {
       const media = gsap.matchMedia();
       media.add(
+        "((max-width: 959px) or (max-height: 659px)) and (prefers-reduced-motion: no-preference)",
+        () => {
+          // Native swipes drive the same photograph movement on touch devices.
+          gsap.utils.toArray<HTMLElement>(".program-film").forEach((card) => {
+            gsap.fromTo(
+              card.querySelector("img"),
+              { xPercent: -4, scale: 1.12 },
+              {
+                xPercent: 4,
+                scale: 1.12,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: card,
+                  scroller: viewport.current,
+                  horizontal: true,
+                  start: "left right",
+                  end: "right left",
+                  scrub: 0.3,
+                  invalidateOnRefresh: true,
+                },
+              },
+            );
+          });
+        },
+      );
+      media.add(
         "(min-width: 960px) and (min-height: 660px) and (prefers-reduced-motion: no-preference)",
         () => {
           const track =
