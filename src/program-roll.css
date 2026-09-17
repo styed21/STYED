@@ -1,4 +1,14 @@
 /* Program information below the supplied circular split-roll. */
+@media (max-width: 768px) {
+  .circular-roll-stage { height: 100svh; min-height: 460px; }
+  .circular-roll-stage > div > div:first-child { width: 40vw; }
+  .circular-roll-stage > div > div:last-child { width: 60vw; }
+  .circular-roll .circular-scroll-showcase__left-item {
+    font-size: clamp(21px, 5.5vw, 34px);
+    width: max-content;
+  }
+  .circular-roll-stage > div > div > div { height: 72svh; }
+}
 .program-campaign {
   margin-top: 30px;
   padding-top: 24px;

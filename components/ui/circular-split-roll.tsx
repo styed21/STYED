@@ -1,4 +1,4 @@
-// Supplied Circular Split Roll; example assets omitted. See docs/circular-programs.md for the integration fixes.
+﻿// Supplied Circular Split Roll; example assets omitted. See docs/circular-programs.md for the integration fixes.
 "use client";
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
@@ -18,7 +18,6 @@ function usePrefersReducedMotion() {
 
   return prefersReducedMotion;
 }
-
 const DESKTOP_WIDTH = 1200;
 const TABLET_MIN_WIDTH = 768;
 
@@ -64,7 +63,6 @@ function getStrength(value: number) {
     gsap.utils.mapRange(DEPTH_MIN, DEPTH_MAX, 0, 1, value),
   );
 }
-
 function shapeFocus(strength: number, start = 0.42, power = 2.8) {
   const normalized = gsap.utils.clamp(0, 1, (strength - start) / (1 - start));
   return Math.pow(normalized, power);
@@ -189,52 +187,7 @@ function CircularSplitRollComp({
     const mm = gsap.matchMedia();
 
     mm.add(
-      "(max-width: 768px) and (prefers-reduced-motion: no-preference)",
-      () => {
-        const ctx = gsap.context(() => {
-          gsap.utils
-            .toArray<HTMLElement>(".program-mobile-card")
-            .forEach((card, index) => {
-              gsap.fromTo(
-                card,
-                { y: 35, rotate: index % 2 ? 3 : -3 },
-                {
-                  y: 0,
-                  rotate: 0,
-                  ease: "none",
-                  scrollTrigger: {
-                    trigger: card,
-                    start: "top 95%",
-                    end: "top 55%",
-                    scrub: 0.4,
-                    invalidateOnRefresh: true,
-                  },
-                },
-              );
-              gsap.fromTo(
-                card.querySelector("img"),
-                { scale: 1.12, yPercent: -3 },
-                {
-                  scale: 1.06,
-                  yPercent: 2,
-                  ease: "none",
-                  scrollTrigger: {
-                    trigger: card,
-                    start: "top bottom",
-                    end: "bottom top",
-                    scrub: 0.4,
-                    invalidateOnRefresh: true,
-                  },
-                },
-              );
-            });
-        }, rootRef);
-        return () => ctx.revert();
-      },
-    );
-
-    mm.add(
-      "(min-width: 769px) and (prefers-reduced-motion: no-preference)",
+      "(prefers-reduced-motion: no-preference)",
       () => {
         const ctx = gsap.context(() => {
           const leftNodes = gsap.utils.toArray(
@@ -258,7 +211,7 @@ function CircularSplitRollComp({
 
             let factor = 1;
 
-            if (width < DESKTOP_WIDTH && width >= TABLET_MIN_WIDTH) {
+            if (width < DESKTOP_WIDTH) {
               factor = width / DESKTOP_WIDTH;
             }
 
@@ -272,12 +225,12 @@ function CircularSplitRollComp({
               rootRef.current.style.setProperty("--css-arc-scale", `${factor}`);
               rootRef.current.style.setProperty(
                 "--css-card-width",
-                `${imageCardWidth * factor}px`,
+                `${width <= TABLET_MIN_WIDTH ? Math.min(170, width * 0.42) : imageCardWidth * factor}px`,
               );
 
               rootRef.current.style.setProperty(
                 "--css-card-height",
-                `${imageCardHeight * factor}px`,
+                `${width <= TABLET_MIN_WIDTH ? Math.min(170, width * 0.42) : imageCardHeight * factor}px`,
               );
             }
 
@@ -323,6 +276,7 @@ function CircularSplitRollComp({
               gsap.set(node, {
                 x: position.x,
                 y: position.y,
+                xPercent: width <= TABLET_MIN_WIDTH ? -50 : 0,
                 scale,
                 opacity,
                 zIndex,
@@ -455,7 +409,7 @@ function CircularSplitRollComp({
   return (
     <section
       ref={rootRef}
-      className={`relative ${reducedMotion ? "min-h-0" : "min-h-screen max-[768px]:min-h-0"} w-full overflow-clip ${background ? "" : "bg-background"} ${titleColor ? "" : "text-foreground"} ${className}`}
+      className={`circular-roll relative ${reducedMotion ? "min-h-0" : "min-h-screen"} w-full overflow-clip ${background ? "" : "bg-background"} ${titleColor ? "" : "text-foreground"} ${className}`}
       style={
         {
           "--css-title-size": titleSize,
@@ -469,7 +423,7 @@ function CircularSplitRollComp({
       <div
         ref={stickyRef}
         aria-hidden="true"
-        className={`relative h-screen w-full overflow-hidden ${reducedMotion ? "hidden" : "max-[768px]:hidden"}`}
+        className={`circular-roll-stage relative h-screen w-full overflow-hidden ${reducedMotion ? "hidden" : ""}`}
       >
         <div className="relative mx-auto flex h-full w-full">
           <div
@@ -518,7 +472,7 @@ function CircularSplitRollComp({
       </div>
 
       <div
-        className={`w-full px-5 py-10 max-md:px-4 max-md:py-8 ${reducedMotion ? "block" : "min-[769px]:sr-only"}`}
+        className={`w-full px-5 py-10 max-md:px-4 max-md:py-8 ${reducedMotion ? "block" : "sr-only"}`}
       >
         <div className="mx-auto grid w-full max-w-5xl grid-cols-3 gap-5 max-md:grid-cols-2 max-md:gap-4">
           {safeItems.map((item) => (
@@ -598,3 +552,4 @@ export default function CircularSplitRoll({
     />
   );
 }
+

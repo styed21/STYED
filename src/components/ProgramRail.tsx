@@ -15,7 +15,7 @@ export function ProgramRail({ children }: { children: ReactNode }) {
     () => {
       const media = gsap.matchMedia();
       media.add(
-        "((max-width: 959px) or (max-height: 659px)) and (prefers-reduced-motion: no-preference)",
+        "(max-height: 499px) and (prefers-reduced-motion: no-preference)",
         () => {
           // Native swipes drive the same photograph movement on touch devices.
           gsap.utils.toArray<HTMLElement>(".program-film").forEach((card) => {
@@ -41,8 +41,9 @@ export function ProgramRail({ children }: { children: ReactNode }) {
         },
       );
       media.add(
-        "(min-width: 960px) and (min-height: 660px) and (prefers-reduced-motion: no-preference)",
+        "(min-height: 500px) and (prefers-reduced-motion: no-preference)",
         () => {
+          const mobile = window.matchMedia("(max-width: 959px)").matches;
           const track =
             root.current!.querySelector<HTMLElement>(".program-track")!;
           const cards = gsap.utils.toArray<HTMLElement>(".program-film");
@@ -51,9 +52,9 @@ export function ProgramRail({ children }: { children: ReactNode }) {
           root.current!.classList.add("rail-is-pinned");
           const timeline = gsap.timeline({
             scrollTrigger: {
-              trigger: root.current,
-              pin: ".program-rail-stage",
-              start: "top 82px",
+              trigger: mobile ? viewport.current : root.current,
+              pin: mobile ? viewport.current : ".program-rail-stage",
+              start: mobile ? "top 110px" : "top 82px",
               end: () => `+=${distance() + window.innerHeight * 0.35}`,
               scrub: 0.65,
               refreshPriority: 1,
@@ -131,7 +132,6 @@ export function ProgramRail({ children }: { children: ReactNode }) {
           role="region"
           tabIndex={0}
           aria-label="Our programs. Scroll to explore."
-          data-lenis-prevent-touch
           onKeyDown={(event) => {
             if (
               event.target !== event.currentTarget ||

@@ -46,6 +46,7 @@
   scrollbar-width: none;
   padding: 36px 0 44px;
   overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
 }
 .program-viewport::-webkit-scrollbar {
   display: none;
