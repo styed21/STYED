@@ -140,7 +140,7 @@ export function Contact() {
             </div>
             <div className="contact-map" data-lenis-prevent>
               <iframe
-                title="Map of Minneapolis and Saint Paul — STYED’s community area"
+                title="Map of Minneapolis and Saint Paul, STYED’s community area"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=-93.40%2C44.86%2C-92.98%2C45.10&layer=mapnik"
                 loading="lazy"
                 referrerPolicy="no-referrer"

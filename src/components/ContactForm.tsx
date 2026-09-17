@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { FormEvent } from "react";
-import { contactSubjects } from "../data/contact";
+import { contactDetails, contactSubjects } from "../data/contact";
 import { Arrow } from "./Arrow";
 import { ScrollTrigger } from "../hooks/useMotion";
 import { scrollToPosition } from "../lib/scroll";
@@ -51,7 +51,7 @@ export function ContactForm() {
   const copy = async () => {
     try {
       await navigator.clipboard.writeText(
-        `STYED inquiry — ${subject}\n\nName: ${values.name.trim()}\nEmail: ${values.email.trim()}${values.phone.trim() ? `\nPhone: ${values.phone.trim()}` : ""}\n\n${values.message.trim()}`,
+        `STYED inquiry: ${subject}\n\nName: ${values.name.trim()}\nEmail: ${values.email.trim()}${values.phone.trim() ? `\nPhone: ${values.phone.trim()}` : ""}\n\n${values.message.trim()}`,
       );
       setCopied(true);
     } catch {
@@ -64,7 +64,8 @@ export function ContactForm() {
         <span>Form preview</span>
         <p>
           Online messages aren’t available yet. You can try the form below;
-          nothing is sent or saved.
+          nothing is sent or saved. To contact us, email{" "}
+          <a href={`mailto:${contactDetails.email}`}>{contactDetails.email}</a>.
         </p>
       </div>
       <form

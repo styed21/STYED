@@ -910,7 +910,7 @@ export function ProgramsIllustratedHero({
               className="program-illustrated-link"
               href={`#${program.id}`}
               onClick={() => onSelect(program.id)}
-              aria-label={`${program.name} — view details`}
+              aria-label={`${program.name}: view details`}
             >
               <div className="program-illustrated-label">
                 <ProgramIcon index={index} />

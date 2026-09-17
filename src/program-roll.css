@@ -1,4 +1,31 @@
 /* Program information below the supplied circular split-roll. */
+.program-campaign {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+}
+.program-campaign h4 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 12px 0 20px;
+}
+.program-campaign dl {
+  margin: 0;
+}
+.program-campaign dl > div + div {
+  margin-top: 20px;
+}
+.program-campaign dt {
+  font-size: 15px;
+  font-weight: 500;
+}
+.program-campaign dd {
+  margin: 6px 0 0;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--muted);
+}
 .program-information {
   display: grid;
   grid-template-columns: 0.7fr 1.3fr;

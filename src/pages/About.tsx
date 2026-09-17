@@ -44,19 +44,17 @@ export function About() {
         </Reveal>
         <div className="editorial-copy">
           <p>
-            Save The Youth Education Development works to reduce violence and
-            instability in Twin Cities neighborhoods through free, consistent
-            after-school tutoring, homework help, mentorship, and leadership
-            development.
+            STYED empowers youth by providing educational resources, secure
+            housing support, and evidence-based violence prevention programs.
           </p>
           <p>
-            In a safe, structured environment, caring adults help young people
-            stay in school, build confidence, and find a pathway toward higher
-            education and self-sufficiency.
+            We advocate for systemic policy changes to eradicate youth
+            homelessness and end the epidemic of gun violence in schools,
+            churches, and communities across America.
           </p>
           <p>
-            Our commitment extends to housing stability, violence prevention,
-            and standing alongside immigrant youth and families.
+            We stand alongside immigrant youth and families to defend their
+            rights and expand their access to opportunity.
           </p>
         </div>
       </section>
@@ -73,14 +71,14 @@ export function About() {
         </Reveal>
         <div className="vision-bottom">
           <p>
-            Regardless of neighborhood, income, or immigration status, every
-            young person deserves the chance to grow into a confident, educated,
-            and empowered adult.
+            To build a nation where every young person has a safe home, access
+            to quality education, and a life free from the threat of gun
+            violence.
           </p>
           <p>
-            Protected from gun violence, drug involvement, and homelessness.
-            Surrounded by mentors, education, and a clear path toward college,
-            career, and community leadership.
+            A generation raised in safety, equipped with opportunity, and
+            empowered to lead. “Safe Youth for Hope” guides our next generation
+            of programming.
           </p>
         </div>
       </section>

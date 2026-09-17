@@ -12,6 +12,7 @@ import {
 } from "../hooks/useMotion";
 import { Arrow } from "./Arrow";
 import { DonateButton } from "./DonateButton";
+import { contactDetails } from "../data/contact";
 import type { ScrollRequest } from "../lib/scroll";
 
 const links = [
@@ -233,6 +234,9 @@ export function Footer() {
         </nav>
         <nav aria-label="Get involved">
           <a href="./contact.html">Contact</a>
+          <a className="footer-email" href={`mailto:${contactDetails.email}`}>
+            {contactDetails.email}
+          </a>
           <a href="./donate.html">
             Support our work <Arrow />
           </a>

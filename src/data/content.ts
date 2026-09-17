@@ -19,6 +19,7 @@ export type Program = {
   image: string;
   imageAlt: string;
   details: string[];
+  campaign?: { name: string; priorities: { title: string; text: string }[] };
 };
 
 export const programs: Program[] = [
@@ -56,6 +57,23 @@ export const programs: Program[] = [
       "School continuity, transportation, and supply support",
       "Life skills, financial literacy, and job-readiness mentorship",
     ],
+    campaign: {
+      name: "Youth Homelessness Advocate",
+      priorities: [
+        {
+          title: "Emergency Housing Access",
+          text: "Partner with local shelters to provide immediate bed spaces for displaced students.",
+        },
+        {
+          title: "Educational Continuity",
+          text: "Help young people experiencing homelessness stay enrolled in school through transportation and supply stipends.",
+        },
+        {
+          title: "Life Skills Mentorship",
+          text: "Host weekly workshops on financial literacy, job interview preparation, and mental wellness.",
+        },
+      ],
+    },
   },
   {
     id: "safety",
@@ -64,7 +82,7 @@ export const programs: Program[] = [
     shortName: "Safety",
     headline: ["Less gun violence.", "More life ahead."],
     description:
-      "Violence prevention, community healing, and youth-led advocacy. Working together for neighborhoods where young people can feel safe.",
+      "Preventing gun violence and street drug and opioid harm through community healing and youth-led advocacy. Working together for safer neighborhoods.",
     image: "community.webp",
     imageAlt: "Community members gathering for a facilitated learning session",
     details: [
@@ -73,6 +91,27 @@ export const programs: Program[] = [
       "Trauma-informed community healing initiatives",
       "Youth-led advocacy to reduce gun violence and street drug harm",
     ],
+    campaign: {
+      name: "Stop Gun Violence Campaign",
+      priorities: [
+        {
+          title: "Safe Sanctuary Initiative",
+          text: "Advocate for advanced, non-intrusive security infrastructure in schools and places of worship.",
+        },
+        {
+          title: "Community Healing Circles",
+          text: "Provide trauma-informed counseling for survivors and families affected by community shootings.",
+        },
+        {
+          title: "Legislative Mobilization",
+          text: "Organize youth-led peaceful rallies to demand stricter background checks and red-flag laws.",
+        },
+        {
+          title: "Data & Storytelling",
+          text: "Pair local incident data with youth testimony to make the case to legislators and funders.",
+        },
+      ],
+    },
   },
   {
     id: "rights",
@@ -143,7 +182,7 @@ export const faqs = [
   ],
   [
     "How can I get involved?",
-    "Explore mentoring, community partnerships, and giving on our Get Involved page. Public contact information and enrollment details will be shared on our Contact page as they become available.",
+    "Explore mentoring, community partnerships, and giving on our Get Involved page. Visit our Contact page to email our team about opportunities and enrollment.",
   ],
 ] as const;
 

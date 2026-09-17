@@ -199,7 +199,7 @@ export function DonationForm() {
         <GivingToken cents={cents ?? 0} frequency={frequency} />
         <div className="giving-story-foot">
           <span>FOR OUR YOUTH.</span>
-          <p>Education, stability, and a sense of belonging — all connected.</p>
+          <p>Education, stability, and a sense of belonging. All connected.</p>
         </div>
       </div>
       <div ref={card} className="giving-card">

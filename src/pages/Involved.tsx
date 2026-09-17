@@ -87,8 +87,7 @@ export function Involved() {
           <h3>Find your way to connect.</h3>
           <p>
             Visit our Contact page for program questions, mentorship, and
-            partnerships. Public contact details will be shared there as they
-            become available.
+            partnerships, or to email our team directly.
           </p>
           <a className="text-link" href="./contact.html">
             Contact STYED <Arrow />

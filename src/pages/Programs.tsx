@@ -108,6 +108,22 @@ export function Programs() {
                     <li key={detail}>{detail}</li>
                   ))}
                 </ul>
+                {program.campaign && (
+                  <div className="program-campaign">
+                    <span className="eyebrow">
+                      Advocacy campaign priorities
+                    </span>
+                    <h4>{program.campaign.name}</h4>
+                    <dl>
+                      {program.campaign.priorities.map((priority) => (
+                        <div key={priority.title}>
+                          <dt>{priority.title}</dt>
+                          <dd>{priority.text}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  </div>
+                )}
                 {program.id === "safety" && (
                   <a
                     className="program-prevention-link"

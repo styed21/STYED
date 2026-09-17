@@ -1,4 +1,7 @@
 /* Shared touch layouts, kept after the page styles so breakpoints agree. */
+.footer-top nav { min-width: 0; }
+.footer-email, .contact-preview-note a { overflow-wrap: anywhere; }
+.contact-preview-note a { text-decoration: underline; text-underline-offset: 3px; }
 .footer-statement.footer-organization {
   flex-direction: column;
   align-items: flex-start;

@@ -6,7 +6,7 @@ export const contactDetails: {
   hours: string | null;
   area: string;
 } = {
-  email: null,
+  email: "Kamal@savetheyoutdu.org",
   phone: null,
   address: null,
   hours: null,
