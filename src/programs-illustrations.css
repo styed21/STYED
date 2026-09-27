@@ -8,7 +8,7 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 14px;
-  background: #26352c;
+  background: #262c35;
 }
 .programs-film-frame > img,
 .programs-film-frame > video {
@@ -27,7 +27,7 @@
 }
 .programs-film .eyebrow {
   font-size: 10px;
-  color: #73806b;
+  color: #6b7480;
 }
 .programs-film h2 {
   font-size: clamp(24px, 2.5vw, 34px);
@@ -97,7 +97,7 @@
   padding-bottom: 5px;
 }
 .programs-illustrated-intro-note p {
-  color: #6b736a;
+  color: #6a6e73;
   font-size: 14px;
   line-height: 1.85;
 }
@@ -169,7 +169,7 @@
   justify-content: center;
   gap: 12px;
   font-size: 10px;
-  color: #6f7667;
+  color: #676e76;
   padding: 13px 5px 17px;
 }
 .program-illustrated-cta .arrow {
@@ -217,7 +217,7 @@
   grid-template-columns: 1fr 1.12fr;
   gap: 7vw;
   align-items: center;
-  background: #f1f3ed;
+  background: #f3f1ed;
   border-radius: 12px;
   margin: 0 28px 90px;
   padding: 75px 5vw;
@@ -237,12 +237,12 @@
 }
 .prevention-objects-heading .eyebrow {
   font-size: 9px;
-  color: #6b7c69;
+  color: #69717c;
   letter-spacing: 0.07em;
 }
 .prevention-scroll-note {
   font-size: 10px;
-  color: #89927f;
+  color: #7f8792;
   white-space: nowrap;
 }
 .prevention-scroll-note > span {
@@ -262,16 +262,16 @@
   overflow: hidden;
   border-radius: 45% 45% 14px 14px / 20% 20% 14px 14px;
   background: #ece6da;
-  border: 1px solid #7d8c661c;
+  border: 1px solid #66768c1c;
 }
 .prevention-object-tablet {
-  background: #e4eade;
+  background: #eae5de;
 }
 .prevention-object-cannabis {
-  background: #e4e9d7;
+  background: #e7e1d9;
 }
 .prevention-object-powder {
-  background: #e2e8e7;
+  background: #e8e6e2;
 }
 .prevention-object-top {
   display: flex;
@@ -279,7 +279,7 @@
   justify-content: space-between;
   padding: 20px 21px 0;
   min-height: 38px;
-  color: #90957f;
+  color: #7f8995;
 }
 .prevention-object-top > span {
   font-size: 10px;
@@ -309,7 +309,7 @@
   padding: 4px 18px 22px;
   font-size: 13px;
   font-weight: 400;
-  color: #556651;
+  color: #515a66;
   text-align: center;
   letter-spacing: -0.015em;
 }
@@ -339,14 +339,14 @@
     400 24px/1.4 Montserrat,
     sans-serif;
   letter-spacing: -0.035em;
-  color: #697963;
+  color: #636d79;
 }
 .prevention-objects-caption em {
-  color: #8d9a80;
+  color: #808b9a;
 }
 .drug-prevention-copy > .eyebrow {
   font-size: 10px;
-  color: #687865;
+  color: #656d78;
   line-height: 1.8;
 }
 .drug-prevention-copy h2 {
@@ -357,10 +357,10 @@
   margin: 26px 0 22px;
 }
 .drug-prevention-copy h2 em {
-  color: #436651;
+  color: #435266;
 }
 .drug-prevention-copy > p {
-  color: #627165;
+  color: #626871;
   font-size: 15px;
   line-height: 1.85;
   max-width: 580px;
@@ -372,7 +372,7 @@
   display: flex;
   gap: 21px;
   padding: 19px 0;
-  border-top: 1px solid #54684b26;
+  border-top: 1px solid #4b586826;
 }
 .prevention-details article > span {
   font-size: 11px;
@@ -389,7 +389,7 @@
 .prevention-details p {
   font-size: 13px;
   line-height: 1.8;
-  color: #677365;
+  color: #656b73;
   max-width: 530px;
 }
 .prevention-actions {

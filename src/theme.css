@@ -23,8 +23,8 @@
   --primary: #bd4825;
   --primary-foreground: #fff;
   --muted-surface: #f1f1e9;
-  --muted-text: #657069;
-  --border: #d5dbd4;
+  --muted-text: #656a70;
+  --border: #dbd8d4;
   --ring: #2856a4;
 }
 .dark {
@@ -32,8 +32,8 @@
   --foreground: #f9f5ed;
   --primary: #efa27a;
   --primary-foreground: #242a2c;
-  --muted-surface: #343c3b;
-  --muted-text: #b7c3b9;
-  --border: #5c6660;
-  --ring: #b9d8bc;
+  --muted-surface: #34373c;
+  --muted-text: #b7bcc3;
+  --border: #5c6066;
+  --ring: #d6cbbb;
 }

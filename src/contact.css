@@ -244,7 +244,7 @@
   overflow: hidden;
   border: 1px solid var(--contact-border);
   border-radius: 7px;
-  background: #edf1ec;
+  background: #f1efec;
 }
 .contact-map iframe {
   display: block;
@@ -350,7 +350,7 @@
   border: 1px solid var(--contact-border);
   border-radius: 10px;
   overflow: hidden;
-  background: #eef2ed;
+  background: #f2f0ed;
   padding-right: 32px;
 }
 .contact-invite-photo {
@@ -373,7 +373,7 @@
 }
 .contact-invite .contact-handwritten {
   font-size: 24px;
-  color: #48644f;
+  color: #485464;
 }
 .contact-invite h2 {
   font-size: clamp(23px, 2vw, 28px);
@@ -384,14 +384,14 @@
 }
 .contact-invite p {
   font-size: 13px;
-  color: #5d6b61;
+  color: #5d636b;
   line-height: 1.7;
   max-width: 470px;
 }
 .contact-invite-button {
-  border: 1px solid #738275;
+  border: 1px solid #737a82;
   border-radius: 999px;
-  color: #3f5b46;
+  color: #3f4b5b;
   background: #ffffff80;
   font-size: 13px;
   white-space: nowrap;
@@ -408,7 +408,7 @@
   padding-top: 27px;
 }
 .contact-bottom-note .eyebrow {
-  color: #657069;
+  color: #656a70;
   font-size: 10px;
   letter-spacing: 0.08em;
 }

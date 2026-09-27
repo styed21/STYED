@@ -8,11 +8,13 @@ import { CommunityMontage } from "../components/CommunityMontage";
 import MapDemo from "@/components/ui/demo";
 import { WhySupport } from "../components/WhySupport";
 import { CommunityPoster } from "../components/CommunityPoster";
+import { PreventionFocus } from "../components/PreventionFocus";
 
 export function Home() {
   return (
     <>
       <Hero />
+      <PreventionFocus />
       <ProgramRail>
         <div className="rail-intro">
           <div>

@@ -9,6 +9,7 @@ import { ScrollTrigger } from "../hooks/useMotion";
 import { ProgramsIllustratedHero } from "@/components/ui/programs-illustrated-hero";
 import { DrugPrevention } from "@/components/ui/drug-prevention";
 import { ProgramsFilm } from "../components/ProgramsFilm";
+import { PreventionFocus } from "../components/PreventionFocus";
 
 const programItems = programs.map((program) => ({
   id: program.id,
@@ -138,6 +139,7 @@ export function Programs() {
         </div>
       </section>
       <DrugPrevention />
+      <PreventionFocus variant="programs" />
       <section className="mentorship-section section-space" id="mentorship">
         <span className="eyebrow">OUR YOUTH MENTORSHIP PROGRAM</span>
         <Reveal>

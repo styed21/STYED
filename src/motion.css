@@ -76,7 +76,7 @@
   --film-color: #974229;
 }
 .program-film-2 {
-  --film-color: #326454;
+  --film-color: #344862;
 }
 .program-film-3 {
   --film-color: #365784;
@@ -231,7 +231,7 @@
 .paper-chapter {
   --sheet: #28282e;
   --sheet-ink: #f8f6ec;
-  --sheet-accent: #d9e4af;
+  --sheet-accent: #d6ccbd;
   --edge: url("/assets/paper-edge-wide.svg");
   position: relative;
   background: var(--sheet);
@@ -241,14 +241,14 @@
 .paper-chapter-1 {
   --sheet: #e8e7db;
   --sheet-ink: #293344;
-  --sheet-accent: #3a5c49;
+  --sheet-accent: #3a495c;
   --edge: url("/assets/paper-edge-soft.svg");
   z-index: 2;
 }
 .paper-chapter-2 {
-  --sheet: #dce6b2;
-  --sheet-ink: #273b32;
-  --sheet-accent: #3c624c;
+  --sheet: #d8cec0;
+  --sheet-ink: #27303b;
+  --sheet-accent: #3c4c62;
   --edge: url("/assets/paper-edge.svg");
   z-index: 3;
 }
@@ -354,7 +354,7 @@
   left: 18px;
   top: 20px;
   bottom: 20px;
-  background: #9faaa16b;
+  background: #9fa4aa6b;
 }
 .paper-navigation a {
   display: flex;
@@ -369,15 +369,15 @@
   width: 36px;
   height: 36px;
   background: #f2f1e7;
-  color: #2b3c32;
-  border: 1px solid #526b5830;
+  color: #2b323c;
+  border: 1px solid #525d6b30;
   border-radius: 50%;
   transition:
     background 0.25s,
     color 0.25s;
 }
 .paper-navigation a.is-active > span:first-child {
-  background: #314b3b;
+  background: #313c4b;
   color: #f6f7df;
 }
 .chapter-nav-label {
@@ -385,7 +385,7 @@
   transform: translateX(-4px);
   padding: 6px 10px;
   background: #f2f1e7;
-  color: #293b31;
+  color: #29313b;
   border-radius: 2px;
   transition:
     opacity 0.2s,
@@ -510,7 +510,7 @@
   bottom: -3%;
   z-index: 7;
   background: #f5f0e4;
-  color: #293c3b;
+  color: #29313c;
   padding: 9px 15px;
   font:
     22px/1.2 Hand,
@@ -541,7 +541,7 @@
   bottom: -6%;
 }
 .paper-chapter-2 .fragment-blue {
-  background: #81947b;
+  background: #7b8694;
 }
 .paper-chapter-2 .fragment-cream {
   background: #c6a17b;
@@ -599,7 +599,7 @@
   width: 25%;
   position: absolute;
   background: #f9f4e9;
-  color: #353c37;
+  color: #35383c;
   padding: 8px 8px 12px;
   box-shadow: 0 16px 32px #6b281b28;
   border-radius: 3px;

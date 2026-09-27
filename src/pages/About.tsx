@@ -3,6 +3,7 @@ import { Reveal } from "../components/Reveal";
 import { Join } from "../components/Join";
 import { Arrow } from "../components/Arrow";
 import MapDemo from "@/components/ui/demo";
+import { PreventionFocus } from "../components/PreventionFocus";
 
 export function About() {
   return (
@@ -112,6 +113,7 @@ export function About() {
         </div>
       </section>
       <MapDemo />
+      <PreventionFocus variant="about" />
       <Join />
     </>
   );

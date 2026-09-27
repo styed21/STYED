@@ -148,9 +148,9 @@ export function Chapters() {
             );
             gsap.fromTo(
               panel,
-              { "--sheet": ["#35414a", "#c5c6b9", "#c0d098"][panelIndex] },
+              { "--sheet": ["#35414a", "#c5c6b9", "#9db1cb"][panelIndex] },
               {
-                "--sheet": ["#28282e", "#e8e7db", "#dce6b2"][panelIndex],
+                "--sheet": ["#28282e", "#e8e7db", "#d8cec0"][panelIndex],
                 ease: "none",
                 scrollTrigger: {
                   trigger: panel,

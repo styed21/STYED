@@ -32,7 +32,7 @@
   --ink: #222e3d;
   --orange: #bd4825;
   --blue: #2856a4;
-  --lime: #dce6cb;
+  --lime: #e2dacf;
   --muted: #65666c;
   --rule: #222e3d26;
   --space: clamp(24px, 5.2vw, 100px);
@@ -1726,7 +1726,7 @@ article[id] {
   --ink: #222e3d;
   --orange: #bd4825;
   --blue: #2856a4;
-  --lime: #dce6cb;
+  --lime: #e2dacf;
   --muted: #65707a;
   --rule: #23344b24;
   --space: clamp(24px, 6.5vw, 112px);
@@ -2237,7 +2237,7 @@ em {
   letter-spacing: -0.04em;
 }
 .vision-section h2 em {
-  color: #d7e6b9;
+  color: #dbd2c4;
 }
 .vision-bottom p {
   font-size: 17px;
@@ -2283,13 +2283,13 @@ em {
   letter-spacing: 0;
 }
 .program-detail-1 {
-  background: #f0f2ed;
+  background: #f2f0ed;
 }
 .program-detail-2 {
   background: #263548;
 }
 .program-detail-2 h2 em {
-  color: #d7e6b9;
+  color: #dbd2c4;
 }
 .program-detail-3 {
   background: #e9eff6;
