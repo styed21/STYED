@@ -37,9 +37,12 @@ for (const [file, source] of html) {
     if (/^(?:https?:|data:|mailto:|tel:)/.test(target)) continue;
     const [pathAndQuery, hash] = target.split("#");
     const pathname = pathAndQuery.split("?")[0];
-    const destination = pathname
-      ? resolve(output, pathname.replace(/^\//, ""))
-      : resolve(output, file);
+    const destination =
+      pathname === "/"
+        ? resolve(output, "index.html")
+        : pathname
+          ? resolve(output, pathname.replace(/^\//, ""))
+          : resolve(output, file);
     assert(
       !relative(output, destination).startsWith(".."),
       `${file}: reference outside public output`,

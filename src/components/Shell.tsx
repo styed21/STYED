@@ -16,7 +16,7 @@ import { contactDetails } from "../data/contact";
 import type { ScrollRequest } from "../lib/scroll";
 
 const links = [
-  ["01", "Home", "./index.html", "home"],
+  ["01", "Home", "/", "home"],
   ["02", "About STYED", "./about.html", "about"],
   ["03", "Our programs", "./programs.html", "programs"],
   ["04", "Mentorship", "./mentorship.html", "mentorship"],
@@ -109,7 +109,7 @@ function Header({ page }: { page: Page }) {
           </span>
           <span>Menu</span>
         </button>
-        <a href="./index.html" className="brand" aria-label="STYED home">
+        <a href="/" className="brand" aria-label="STYED home">
           <img
             src={asset("styed-logo.png")}
             alt="Save The Youth Education & Development"
@@ -214,7 +214,7 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-top">
-        <a href="./index.html" className="footer-logo">
+        <a href="/" className="footer-logo">
           <img
             src={asset("styed-logo.png")}
             alt="STYED"
@@ -245,7 +245,10 @@ export function Footer() {
           </a>
         </nav>
       </div>
-      <div className="footer-statement footer-organization" aria-label="Save the Youth Education & Development">
+      <div
+        className="footer-statement footer-organization"
+        aria-label="Save the Youth Education & Development"
+      >
         <span>Save the Youth</span>
         <span>Education &amp; Development</span>
       </div>
