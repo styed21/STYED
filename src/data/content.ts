@@ -134,20 +134,20 @@ export const programs: Program[] = [
 
 export const heroSlides = [
   {
-    image: "hero-drug-prevention.webp",
-    alt: "Drug prevention awareness photograph of a person beside pills and a syringe, supplied by STYED",
-    lines: ["A future beyond drugs.", "Support starts here."],
-    label: "Youth drug prevention & support",
-    detail: "Connection. Guidance. A safer way forward.",
-    href: "./programs.html#drug-prevention",
-  },
-  {
     image: "hero-mentorship.webp",
     alt: "Students and an educator collaborating around a table",
     lines: ["A place to learn.", "The space to grow."],
     label: "After-school tutoring & mentorship",
     detail: "Big possibilities begin with everyday support.",
     href: "./programs.html#education",
+  },
+  {
+    image: "hero-drug-prevention.webp",
+    alt: "Drug prevention awareness photograph of a person beside pills and a syringe, supplied by STYED",
+    lines: ["A future beyond drugs.", "Support starts here."],
+    label: "Youth drug prevention & support",
+    detail: "Connection. Guidance. A safer way forward.",
+    href: "./programs.html#drug-prevention",
   },
   {
     image: "community.webp",
