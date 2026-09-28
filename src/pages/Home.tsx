@@ -14,7 +14,6 @@ export function Home() {
   return (
     <>
       <Hero />
-      <PreventionFocus />
       <ProgramRail>
         <div className="rail-intro">
           <div>
@@ -38,6 +37,7 @@ export function Home() {
       </ProgramRail>
       <CommunityPoster />
       <Chapters />
+      <PreventionFocus />
       <Services />
       <WhySupport />
       <CommunityMontage />
