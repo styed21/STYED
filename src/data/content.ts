@@ -142,8 +142,8 @@ export const heroSlides = [
     href: "./programs.html#education",
   },
   {
-    image: "hero-drug-prevention.webp",
-    alt: "Drug prevention awareness photograph of a person beside pills and a syringe, supplied by STYED",
+    image: "drug-hero-section.jpeg",
+    alt: "A support group surrounding a person affected by addiction",
     lines: ["A future beyond drugs.", "Support starts here."],
     label: "Youth drug prevention & support",
     detail: "Connection. Guidance. A safer way forward.",
