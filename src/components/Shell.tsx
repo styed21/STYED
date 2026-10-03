@@ -112,12 +112,12 @@ function Header({ page }: { page: Page }) {
         <a href="/" className="brand" aria-label="STYED home">
           <img
             src={asset("styed-logo.png")}
-            alt="Save The Youth Education & Development"
+            alt="Save The Youth Education Development"
             width="65"
             height="65"
           />
           <span>
-            STYED<small>SAFE YOUTH FOR HOPE</small>
+            STYED<small>SAVE THE YOUTH EDUCATION DEVELOPMENT</small>
           </span>
         </a>
         <nav className="desktop-nav" aria-label="Main pages">
@@ -200,7 +200,7 @@ function Header({ page }: { page: Page }) {
           </div>
         </div>
         <div className="menu-bottom">
-          <span>Safe Youth for Hope.</span>
+          <span>Save The Youth Education Development.</span>
           <a href="./contact.html">
             Let's connect <Arrow />
           </a>
@@ -247,7 +247,7 @@ export function Footer() {
       </div>
       <div
         className="footer-statement footer-organization"
-        aria-label="Save the Youth Education & Development"
+        aria-label="Save The Youth Education Development"
       >
         <span>Save the Youth</span>
         <span>Education &amp; Development</span>

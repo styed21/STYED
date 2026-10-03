@@ -18,7 +18,7 @@ export function About() {
           </h1>
         </Reveal>
         <div className="page-intro-bottom">
-          <span className="eyebrow">SAFE YOUTH FOR HOPE</span>
+          <span className="eyebrow">SAVE THE YOUTH EDUCATION DEVELOPMENT</span>
           <p>
             A Twin Cities community where every young person has the safety,
             support, and opportunity to thrive.
@@ -34,6 +34,29 @@ export function About() {
           fetchPriority="high"
         />
       </div>
+      <section className="editorial-section section-space" id="leadership">
+        <Reveal>
+          <span className="eyebrow">LEADERSHIP &amp; ORGANIZATION</span>
+          <h2>
+            Founded with
+            <br />
+            <em>purpose.</em>
+          </h2>
+        </Reveal>
+        <div className="editorial-copy">
+          <p>
+            <strong>Mr. Kamal Ali, Executive Director</strong>
+          </p>
+          <p>
+            Mr. Kamal Ali founded Save The Youth Education Development (STYED)
+            in 2016 and continues to serve as its Executive Director.
+          </p>
+          <p>
+            Save The Youth Education Development (STYED) is a 501(c)(3)
+            nonprofit organization serving young people and families.
+          </p>
+        </div>
+      </section>
       <section className="editorial-section section-space" id="mission">
         <Reveal>
           <span className="eyebrow">OUR MISSION</span>
@@ -78,8 +101,8 @@ export function About() {
           </p>
           <p>
             A generation raised in safety, equipped with opportunity, and
-            empowered to lead. “Safe Youth for Hope” guides our next generation
-            of programming.
+            empowered to lead through education, stability, safety, and
+            belonging.
           </p>
         </div>
       </section>

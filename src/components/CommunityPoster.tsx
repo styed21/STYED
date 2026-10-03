@@ -38,7 +38,7 @@ export function CommunityPoster() {
             height="976"
             loading="lazy"
             decoding="async"
-            alt="Save The Youth Education & Development, serving Minneapolis and Saint Paul: after-school tutoring, homework help, and engaging parents and schools. Empower yourself. Prepare for tomorrow."
+            alt="Save The Youth Education Development, serving Minneapolis and Saint Paul: after-school tutoring, homework help, and engaging parents and schools. Empower yourself. Prepare for tomorrow."
           />
           <span>
             View full-size poster <Arrow direction="up-right" />

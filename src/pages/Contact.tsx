@@ -97,7 +97,9 @@ export function Contact() {
             <br />
             We’d love to connect with you.
           </p>
-          <span className="eyebrow">STYED / Safe Youth for Hope</span>
+          <span className="eyebrow">
+            SAVE THE YOUTH EDUCATION DEVELOPMENT (STYED)
+          </span>
         </div>
       </section>
 

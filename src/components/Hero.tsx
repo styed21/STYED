@@ -219,7 +219,7 @@ export function Hero() {
         <span className="eyebrow">
           <i /> MINNEAPOLIS & THE TWIN CITIES
         </span>
-        <span className="eyebrow">SAFE YOUTH FOR HOPE</span>
+        <span className="eyebrow">SAVE THE YOUTH EDUCATION DEVELOPMENT</span>
       </div>
       <div className="hero-content">
         <h1

@@ -130,7 +130,7 @@ function GivingToken({
               : "one gift, shared possibility"}
           </span>
           <span className="token-bottom">
-            SAFE YOUTH <span>FOR HOPE.</span>
+            YOUTH EDUCATION <span>&amp; DEVELOPMENT</span>
           </span>
         </div>
       </div>
